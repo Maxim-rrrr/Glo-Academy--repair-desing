@@ -1,3 +1,221 @@
 * {
     box-sizing: border-box;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background: #131313;
+}
+
+.header__menu {
+    padding: 22px 0;
+}
+
+.logo {
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    color: #e3b873;
+}
+
+.nav__item {
+    margin-left: 20px;
+
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.nav__item:hover {
+    color: #e3b873;
+}
+
+.phone {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-decoration-line: underline;
+
+    color: #e3b873;
+}
+
+.button {
+    padding: 13px 20px;
+}
+
+.contacts__button{
+    margin-left: 30px;
+}
+
+.button--primary {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: none;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    background-color: #e3b873;
+    color: #ffffff;
+}
+
+.instagram__span{
+    position: absolute;
+    left: 50%;
+    right: 90.54%;
+    top: 30%;
+    bottom: 96.82%;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #e3b873;
+
+    transform: rotate(90deg)
+}
+
+
+.hero__instagram{
+    position: absolute;
+    width: 10%;
+    height: 707px;
+    
+    background: #131313;
+}
+
+.hero__content{
+    margin-left: 10%;
+    padding: 0px;
+    
+    height: 707px;
+    
+    background: url(background/background-hero.jpg);
+    
+}
+
+.title{
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.hero__title{
+    padding-top: 194px;
+    margin-left: 60px;
+}
+
+.title__town{
+    color: #e3b873;
+}
+
+.hero__text{
+    padding-top: 20px;
+    margin-left: 60px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+
+    color: #ffffff;
+}
+
+.hero__button-box{
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.button--outline{
+    margin-left: 20px;
+    padding: 11px 18px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #00000000;
+
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+.scroll-down{
+    position: relative;
+    z-index: 2;
+    top: -50px;
+
+    display: block;
+    width: 247px;
+    height: 97px;
+
+    background: #131313;
+    
+}
+
+.scroll-down__text{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+
+    text-decoration: none;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 138.6%;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.scroll-down__arrow{
+    position: absolute;
+    top: 38%;
+    left: 60%;
+
+    width: 29px;
+    height: 29px;
+
+
+    border: 1.5px solid #E3B873;
+    border-radius: 50%;
+}
+
+.scroll-down__arrow img{
+    position: absolute;
+    top: 38%;
+    left: 30%;
+}
+
+
