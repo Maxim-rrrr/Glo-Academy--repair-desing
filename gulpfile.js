@@ -20,10 +20,12 @@ function bs() {
 function serveSass() {
     return src("./sass/*.sass")
         .pipe(sass())
+        //gulp-autoprefixer
         .pipe(autoprefixer({
             cascade: false
         }))
         .pipe(dest("./css"))
+        //browser-sync
         .pipe(browserSync.stream());
 };
 
