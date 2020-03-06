@@ -323,9 +323,15 @@ template {
   text-transform: uppercase;
   border: none;
   border-radius: 2px; }
+  .button:hover {
+    cursor: pointer; }
   .button--primary {
     background-color: #e3b873;
-    color: #ffffff; }
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      box-shadow: none; }
   .button--outline {
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -358,7 +364,10 @@ template {
   margin-right: 40px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff; }
+  color: #ffffff;
+  transition: color 0.2s; }
+  .nav__item:hover {
+    color: #e3b873; }
 
 .phone {
   color: #e3b873; }
@@ -375,7 +384,14 @@ template {
   height: 100vh;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   color: #ffffff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
+    position: relative;
     max-width: 670px; }
   .hero__text {
     max-width: 504px;
@@ -401,17 +417,34 @@ template {
     text-decoration: none;
     background-color: #131313;
     color: #ffffff; }
+    .hero__scroll-down::after {
+      content: '';
+      margin-left: 12px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e3b873;
+      border-radius: 50%;
+      background: url("../img/arrow-down.svg") no-repeat center; }
 
 .instagram {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #131313; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
+    line-height: 0.8;
     color: #e3b873;
     transform: rotate(90deg); }
+    .instagram__link::after {
+      content: '';
+      margin-left: 8px;
+      width: 50px;
+      height: 1px;
+      background-color: #e3b873; }
 
 .title {
   margin: 0;
