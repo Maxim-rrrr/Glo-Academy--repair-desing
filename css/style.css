@@ -319,7 +319,7 @@ template {
   font-display: wrap; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 24px;
   font-size: 0.93rem;
   text-transform: uppercase;
   border: none;
@@ -361,7 +361,7 @@ body {
     content: '';
     display: inline-block;
     vertical-align: text-top;
-    margin: 0 10px;
+    margin: 0 5px;
     width: 32px;
     height: 2px;
     background-color: #e3b873; }
@@ -381,6 +381,7 @@ body {
   align-items: center; }
 
 .logo {
+  font-size: 1.075rem;
   color: #e3b873;
   text-transform: uppercase; }
 
@@ -422,9 +423,15 @@ body {
     margin-left: 4.28rem; }
   .hero__text {
     max-width: 504px;
-    font-size: 1.57rem; }
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 3.4rem;
+    font-size: 1.57rem;
+    line-height: 1.3; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 18px;
+    padding: 18px 0;
+    width: 207px; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -440,16 +447,18 @@ body {
     align-items: center;
     min-width: 17.6rem;
     min-height: 6.92rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     background-color: #131313;
     color: #ffffff; }
     .hero__scroll-down::after {
       content: '';
-      margin-left: 12px;
+      margin-left: 17px;
       width: 30px;
       height: 30px;
-      border: 2px solid #e3b873;
+      border: 1px solid #e3b873;
       border-radius: 50%;
       background: url("../img/arrow-down.svg") no-repeat center; }
 
@@ -461,6 +470,7 @@ body {
   .instagram__link {
     display: flex;
     align-items: center;
+    font-size: 1.1rem;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 0.8;
@@ -468,7 +478,7 @@ body {
     transform: rotate(90deg); }
     .instagram__link::after {
       content: '';
-      margin-left: 8px;
+      margin-left: 12px;
       width: 50px;
       height: 1px;
       background-color: #e3b873; }
@@ -477,7 +487,8 @@ body {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 2.857rem; }
+  font-size: 2.857rem;
+  line-height: 1.4; }
   .title--primary {
     color: #e3b873; }
 

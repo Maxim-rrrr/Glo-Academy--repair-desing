@@ -23,14 +23,19 @@
     position: relative
     max-width: 47.85rem
     margin-left: 4.28rem
-
   &__text
     max-width: 504px
+    margin: 0
+    margin-top: 1rem
+    margin-bottom: 3.4rem
 
     font-size: 1.57rem
+    line-height: 1.3
 
   &__button
-    margin-right: 20px
+    margin-right: 18px
+    padding: 18px 0
+    width: 207px
 
   &__instagram
     position: absolute
@@ -51,6 +56,8 @@
     min-width: 17.6rem
     min-height: 6.92rem 
 
+    font-family: 'Yeseva One', cursive
+    font-size: 12px
     text-transform: uppercase
     text-decoration: none
 
@@ -59,11 +66,11 @@
     &::after
       content: ''
 
-      margin-left: 12px
+      margin-left: 17px
       width: 30px
       height: 30px
 
-      border: 2px solid $primary
+      border: 1px solid $primary
       border-radius: 50%
       background: url('../img/arrow-down.svg') no-repeat center
 
@@ -77,6 +84,7 @@
     display: flex
     align-items: center
 
+    font-size: 1.1rem
     text-transform: uppercase
     text-decoration: none
     line-height: 0.8
@@ -88,7 +96,7 @@
     &::after
       content: ''
 
-      margin-left: 8px
+      margin-left: 12px
       width: 50px
       height: 1px
 
@@ -100,5 +108,6 @@
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
   font-size: 2.857rem
+  line-height: 1.4
   &--primary
     color: $primary
