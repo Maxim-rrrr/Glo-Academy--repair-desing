@@ -1,3 +1,4 @@
+/*
 //Всё обёрнуто в addEventListener для того чтобы запускать все скрипты после подгрузки всей вёрстки
 document.addEventListener("DOMContentLoaded", (event) => {
   //получение элементов
@@ -20,5 +21,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
   });
 
+  
+});
+*/
+
+//jQuery
+//Всё обёрнуто в эту функцию чтобы запускалось всё после полной прогрузки страницы
+$(document).ready(function () {
+  //получение элементов
+  var modal = $('.modal'),                    //Модальное окно
+      modalBtn = $('[data-toggle=modal]');    // все элементы вызывающие модальное окно
+
+  //Вункция вызова модального окна
+  modalBtn.on('click', () => {
+    modal.toggleClass('modal--visible');
+  });
+      
+  //Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
+  modal.on('click', () => {
+    if (event.target.className === "modal__close" || event.target.className === "modal modal--visible") {
+
+      modal.toggleClass('modal--visible');
+
+    };
+  });
   
 });
