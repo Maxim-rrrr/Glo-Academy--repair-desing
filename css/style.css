@@ -454,7 +454,7 @@ img {
   left: 0;
   top: 0;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
   background-color: #131313;
   padding: 24px 0; }
 
@@ -797,3 +797,11 @@ img {
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 900px) {
+  .col-50 {
+    width: 100%; }
+  .col-project__content {
+    margin-bottom: 35px; }
+  .swiper-slide__text {
+    flex-basis: 50%; } }
