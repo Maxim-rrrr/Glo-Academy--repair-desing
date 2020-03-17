@@ -22,22 +22,28 @@ $(document).ready(function () {
   //Слайдер 
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
+    // Точки-индикаторы
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
     },
+    // Стрелки навигации
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
+  // Получение элементов
+  var next = $('.swiper-button-next');    // Стрелка вперёд
+  var prev = $('.swiper-button-prev');    // Стрелка назад
+  var bullets = $('.swiper-pagination');  // Блок с точками-индикаторами
 
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+  // Расчёт позиции 
+  next.css('left', prev.width() + 20 + bullets.width() + 20); // Стрелка вперёд
+  bullets.css('left', prev.width() + 20);                     // Блок с точками-индикаторами
 
-  next.css('left', prev.width() + 20 + bullets.width() + 20);
-  bullets.css('left', prev.width() + 20);
+  // Инициализация библиотеки WOW
+  new WOW().init();
 
 });
 /*

@@ -470,14 +470,16 @@ img {
   color: #e3b873;
   text-transform: uppercase; }
 
-.nav__item {
-  margin-right: 2.85rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  transition: color 0.2s; }
-  .nav__item:hover {
-    color: #e3b873; }
+.nav {
+  display: flex; }
+  .nav__item {
+    margin-right: 2.85rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.2s; }
+    .nav__item:hover {
+      color: #e3b873; }
 
 .phone {
   color: #e3b873; }
