@@ -12,6 +12,36 @@
       display: none
     &__content
       margin-left: 0
+
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 5rem
+  .card
+    &__text
+      margin-left: 0
+  .design
+    background-color: $dark
+    &__text
+      color: $light
+    &__section-title
+      color: $light
+    &__card
+      margin-bottom: 5.7rem
+  .col-50
+    width: 100%
+  .col-project__content
+    margin-bottom: 35px
+  .swiper
+    &-slide
+      &__text
+        flex-basis: 50%
+  .control
+    &__video
+      min-height: 300px
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -34,18 +64,39 @@
       margin-bottom: 1.85rem
     &__scroll-down
       display: none
+  .control
+    position: relative
+    background-color: $dark
+    &__video
+      min-height: 200px
+      & img
+        width: 39px
+        height: 39px
+    &__text
+      color: $light
+    &__button
+      position: absolute
+      order: 5
+      bottom: -2rem
+      left: 5%
+      width: 90%
+    &__input-group
+      flex-basis: 100%
+    &__input-group:first-child
+      margin-bottom: 5.25rem
+    &__label
+      color: rgba($light, 0.5)
+    &__input
+      &::placeholder
+        color: $light
+    &__policy
+      &-label
+        justify-content: flex-start
+        color: $light
+
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 900px )
-  .col-50
-    width: 100%
-  .col-project__content
-    margin-bottom: 35px
-  .swiper
-    &-slide
-      &__text
-        flex-basis: 50%
 
   
