@@ -45,6 +45,95 @@ $(document).ready(function () {
   // Инициализация библиотеки WOW
   new WOW().init();
 
+  // Валидация форм
+  $('.modal__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+      },
+      userEmail: {
+        required: true,
+        email: true,
+      }
+    },
+    errorClass: "invalid",
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Длина имени 2-15 символов",
+        maxlength: "Длина имени 2-15 символов"
+      },
+      userPhone:{
+        required: "Телефон обязательно",
+      },
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  $('.footer__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+      },
+      userQuestion: {
+        required: true,
+      }
+    },
+    errorClass: "invalid",
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Длина имени 2-15 символов",
+        maxlength: "Длина имени 2-15 символов"
+      },
+      userPhone:{
+        required: "Телефон обязательно",
+      },
+      userQuestion: {
+        required: "Обязательно напишите вопрос",
+      }
+    }
+  });
+
+  $('.control__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+      }
+    },
+    errorClass: "invalid",
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Длина имени 2-15 символов",
+        maxlength: "Длина имени 2-15 символов"
+      },
+      userPhone:{
+        required: "Телефон обязательно",
+      }
+    }
+  });
+
+  // Маска для номера телефона
+  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });
 /*
 
