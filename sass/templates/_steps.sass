@@ -64,63 +64,63 @@
         background: url(../img/arrow-prev.svg) no-repeat center
       &-next
         background: url(../img/arrow-next.svg) no-repeat center
-.plan__swiper-pagination
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  margin-bottom: 3.2rem
-  
-.plan__swiper-pagination>.swiper-pagination-bullet
-  background-color: $dark
-  flex-basis: 33%
-  margin-top: 7rem
-  margin-bottom: 3.2rem
-  &::before
-    content: ''
-    font-family: Yeseva One, cursive
-    font-style: normal
-    font-weight: normal
-    font-size: 1.07rem
-    line-height: 1.5rem
-    text-transform: uppercase
-    color: $light
-    border-bottom: 1px solid $primary
-  &::after
-    content: ''
-    display: block
-    margin-top: 0.857rem
-    max-width: 9.14rem
-    font-style: normal
-    font-weight: normal
-    font-size: 1.07rem
-    line-height: 1.2857rem
-  &:nth-child(1)
-    &::before
-      content: '01'
-    &::after
-      content: 'Выезд на замер помещения'
-  &:nth-child(2)
-    &::before
-      content: '02'
-    &::after
-      content: 'Составление сметы'
-  &:nth-child(3)
-    &::before
-      content: '03'
-    &::after
-      content: 'Разработка дизайн проекта'
-  &:nth-child(4)
-    &::before
-      content: '04'
-    &::after
-      content: 'Закупка расходных материалов'
-  &:nth-child(5)
-    &::before
-      content: '05'
-    &::after
-      content: 'Ремонтно-отделочные работы'
-  &:nth-child(6)
-    &::before
-      content: '06'
-    &::after
-      content: 'Приемка-сдача работ'
+.plan
+  &__swiper-pagination
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 3.2rem
+    &>.swiper-pagination-bullet
+      background-color: transparent
+      flex-basis: 33%
+      margin-top: 7rem
+      margin-bottom: 3.2rem
+      &::before
+        content: ''
+        font-family: Yeseva One, cursive
+        font-style: normal
+        font-weight: normal
+        font-size: 1.07rem
+        line-height: 1.5rem
+        text-transform: uppercase
+        color: $light
+        border-bottom: 1px solid $primary
+      &::after
+        content: ''
+        display: block
+        margin-top: 0.857rem
+        max-width: 9.14rem
+        font-style: normal
+        font-weight: normal
+        font-size: 1.07rem
+        line-height: 1.2857rem
+      &:nth-child(1)
+        &::before
+          content: '01'
+        &::after
+          content: 'Выезд на замер помещения'
+      &:nth-child(2)
+        &::before
+          content: '02'
+        &::after
+          content: 'Составление сметы'
+      &:nth-child(3)
+        &::before
+          content: '03'
+        &::after
+          content: 'Разработка дизайн проекта'
+      &:nth-child(4)
+        &::before
+          content: '04'
+        &::after
+          content: 'Закупка расходных материалов'
+      &:nth-child(5)
+        &::before
+          content: '05'
+        &::after
+          content: 'Ремонтно-отделочные работы'
+      &:nth-child(6)
+        &::before
+          content: '06'
+        &::after
+          content: 'Приемка-сдача работ'

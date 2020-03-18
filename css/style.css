@@ -868,55 +868,54 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 3.2rem; }
-
-.plan__swiper-pagination > .swiper-pagination-bullet {
-  background-color: #131313;
-  flex-basis: 33%;
-  margin-top: 7rem;
-  margin-bottom: 3.2rem; }
-  .plan__swiper-pagination > .swiper-pagination-bullet::before {
-    content: '';
-    font-family: Yeseva One, cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.07rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    color: #ffffff;
-    border-bottom: 1px solid #e3b873; }
-  .plan__swiper-pagination > .swiper-pagination-bullet::after {
-    content: '';
-    display: block;
-    margin-top: 0.857rem;
-    max-width: 9.14rem;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.07rem;
-    line-height: 1.2857rem; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::before {
-    content: '01'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::after {
-    content: 'Выезд на замер помещения'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::before {
-    content: '02'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::after {
-    content: 'Составление сметы'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::before {
-    content: '03'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::after {
-    content: 'Разработка дизайн проекта'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::before {
-    content: '04'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::after {
-    content: 'Закупка расходных материалов'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::before {
-    content: '05'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::after {
-    content: 'Ремонтно-отделочные работы'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::before {
-    content: '06'; }
-  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::after {
-    content: 'Приемка-сдача работ'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet {
+    background-color: transparent;
+    flex-basis: 33%;
+    margin-top: 7rem;
+    margin-bottom: 3.2rem; }
+    .plan__swiper-pagination > .swiper-pagination-bullet::before {
+      content: '';
+      font-family: Yeseva One, cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-bottom: 1px solid #e3b873; }
+    .plan__swiper-pagination > .swiper-pagination-bullet::after {
+      content: '';
+      display: block;
+      margin-top: 0.857rem;
+      max-width: 9.14rem;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.2857rem; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::before {
+      content: '01'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::after {
+      content: 'Выезд на замер помещения'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::before {
+      content: '02'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::after {
+      content: 'Составление сметы'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::before {
+      content: '03'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::after {
+      content: 'Разработка дизайн проекта'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::before {
+      content: '04'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::after {
+      content: 'Закупка расходных материалов'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::before {
+      content: '05'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::after {
+      content: 'Ремонтно-отделочные работы'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::before {
+      content: '06'; }
+    .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::after {
+      content: 'Приемка-сдача работ'; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
