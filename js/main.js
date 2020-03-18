@@ -48,7 +48,7 @@ $(document).ready(function () {
     loop: true,
     // Точки-индикаторы
     pagination: {
-      el: '.steps__swiper-pagination',
+      el: '.steps__swiper-pagination,.plan__swiper-pagination',
       type: 'bullets',
     },
     // Стрелки навигации

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -862,40 +863,60 @@ img {
   .steps__swiper-button-next {
     background: url(../img/arrow-next.svg) no-repeat center; }
 
-.plan {
+.plan__swiper-pagination {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 3.2rem; }
+
+.plan__swiper-pagination > .swiper-pagination-bullet {
+  background-color: #131313;
+  flex-basis: 33%;
   margin-top: 7rem;
   margin-bottom: 3.2rem; }
-  .plan__card {
-    min-height: 5rem;
-    max-width: 9.3rem;
-    opacity: 0.3; }
-    .plan__card-active {
-      opacity: 1; }
-    .plan__card-number {
-      margin-bottom: 0.857rem;
-      position: relative;
-      font-family: Yeseva One, cursive;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.07rem;
-      line-height: 1.5rem;
-      text-transform: uppercase; }
-      .plan__card-number::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 16px;
-        height: 1px;
-        background-color: #e3b873; }
-    .plan__card-text {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.07rem;
-      line-height: 1.2857rem; }
+  .plan__swiper-pagination > .swiper-pagination-bullet::before {
+    content: '';
+    font-family: Yeseva One, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 1px solid #e3b873; }
+  .plan__swiper-pagination > .swiper-pagination-bullet::after {
+    content: '';
+    display: block;
+    margin-top: 0.857rem;
+    max-width: 9.14rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 1.2857rem; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::before {
+    content: '01'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(1)::after {
+    content: 'Выезд на замер помещения'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::before {
+    content: '02'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(2)::after {
+    content: 'Составление сметы'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::before {
+    content: '03'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(3)::after {
+    content: 'Разработка дизайн проекта'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::before {
+    content: '04'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(4)::after {
+    content: 'Закупка расходных материалов'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::before {
+    content: '05'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(5)::after {
+    content: 'Ремонтно-отделочные работы'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::before {
+    content: '06'; }
+  .plan__swiper-pagination > .swiper-pagination-bullet:nth-child(6)::after {
+    content: 'Приемка-сдача работ'; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
