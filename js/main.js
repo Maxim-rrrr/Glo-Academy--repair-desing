@@ -20,27 +20,27 @@ $(document).ready(function () {
   });
   
   //Слайдер 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     // Точки-индикаторы
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects__swiper-pagination',
       type: 'bullets',
     },
     // Стрелки навигации
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.projects__swiper-button-next',
+      prevEl: '.projects__swiper-button-prev',
     },
   });
   // Получение элементов
-  var next = $('.swiper-button-next');    // Стрелка вперёд
-  var prev = $('.swiper-button-prev');    // Стрелка назад
-  var bullets = $('.swiper-pagination');  // Блок с точками-индикаторами
+  var projectsNext = $('.projects__swiper-button-next');    // Стрелка вперёд
+  var projectsPrev = $('.projects__swiper-button-prev');    // Стрелка назад
+  var projectsBullets = $('.projects__swiper-pagination');  // Блок с точками-индикаторами
 
   // Расчёт позиции 
-  next.css('left', prev.width() + 20 + bullets.width() + 20); // Стрелка вперёд
-  bullets.css('left', prev.width() + 20);                     // Блок с точками-индикаторами
+  projectsNext.css('left', projectsPrev.width() + 20 + projectsBullets.width() + 20); // Стрелка вперёд
+  projectsBullets.css('left', projectsPrev.width() + 20);                             // Блок с точками-индикаторами
 
   // Инициализация библиотеки WOW
   new WOW().init();

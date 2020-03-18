@@ -423,6 +423,12 @@ img {
       text-align: left; }
     .section-title--light {
       color: #ffffff; }
+    .section-title__description {
+      font-weight: 400;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+      color: #ffffff; }
     .section-title__heading {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
@@ -596,6 +602,38 @@ img {
   padding-bottom: 30rem; }
   .projects__section-title-heading {
     font-size: 1.92rem; }
+  .projects__swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1; }
+  .projects__swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10; }
+  .projects__swiper-button-prev, .projects__swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    background-size: 42px;
+    width: 42px;
+    height: 14px; }
+    .projects__swiper-button-prev::after, .projects__swiper-button-next::after {
+      display: none; }
+  .projects__swiper-button-prev {
+    left: 0;
+    background: url(../img/arrow-prev.svg) no-repeat center; }
+  .projects__swiper-button-next {
+    background: url(../img/arrow-next.svg) no-repeat center; }
 
 .swiper-slide {
   display: flex;
@@ -624,22 +662,6 @@ img {
   width: 10px; }
   .swiper-pagination-bullet-active {
     background-color: #ffffff; }
-
-.swiper-button-prev, .swiper-button-next {
-  bottom: 0;
-  top: auto;
-  background-size: 42px;
-  width: 42px;
-  height: 14px; }
-  .swiper-button-prev::after, .swiper-button-next::after {
-    display: none; }
-
-.swiper-button-prev {
-  left: 0;
-  background: url(../img/arrow-prev.svg) no-repeat center; }
-
-.swiper-button-next {
-  background: url(../img/arrow-next.svg) no-repeat center; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
@@ -760,7 +782,7 @@ img {
   color: #ffffff; }
 
 .design {
-  margin-bottom: 30rem; }
+  margin-bottom: -32rem; }
   .design__section-title {
     margin-bottom: 1.35rem; }
   .design__text {
@@ -775,6 +797,12 @@ img {
     bottom: -1rem;
     padding-right: 5.5rem;
     padding-left: 2.214rem; }
+
+.steps {
+  padding-top: 30.6rem;
+  padding-bottom: 30rem; }
+  .steps__section-title-heading {
+    font-size: 1.92rem; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;

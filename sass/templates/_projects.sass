@@ -2,6 +2,43 @@
   padding-bottom: 30rem
   &__section-title-heading
     font-size: 1.92rem
+  &__swiper
+    &-container
+      margin-left: auto
+      margin-right: auto
+      position: relative
+      overflow: hidden
+      list-style: none
+      padding: 0
+      z-index: 1
+    &-pagination 
+      position: absolute
+      text-align: center
+      transition: 300ms opacity
+      transform: translate3d(0, 0, 0)
+      z-index: 10
+    &-button
+      &-prev, &-next
+        position: absolute
+        //height: var(--swiper-navigation-size)
+        //margin-top: calc(-1 * var(--swiper-navigation-size) / 2)
+        z-index: 10
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        bottom: 0
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-prev
+        left: 0
+        background: url(../img/arrow-prev.svg) no-repeat center
+      &-next
+        background: url(../img/arrow-next.svg) no-repeat center
+
 .swiper
   &-slide
     display: flex
@@ -30,20 +67,7 @@
       width: 10px
       &-active
         background-color: $light
-  &-button
-    &-prev, &-next
-      bottom: 0
-      top: auto
-      background-size: 42px
-      width: 42px
-      height: 14px
-      &::after
-        display: none
-    &-prev
-      left: 0
-      background: url(../img/arrow-prev.svg) no-repeat center
-    &-next
-      background: url(../img/arrow-next.svg) no-repeat center
+  
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
