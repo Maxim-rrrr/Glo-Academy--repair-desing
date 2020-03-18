@@ -3,3 +3,98 @@
   padding-bottom: 30rem
   &__section-title-heading
     font-size: 1.92rem
+  &__swiper
+    &-container
+      margin-left: auto
+      margin-right: auto
+      position: relative
+      overflow: hidden
+      list-style: none
+      padding: 0
+      z-index: 1
+    &-slide
+      &-number
+        margin-bottom: 1.57rem
+        font-family: Yeseva One, cursive
+        font-style: normal
+        font-weight: normal
+        font-size: 1.2857rem
+        line-height: 1.786rem
+        text-transform: uppercase
+        color: $light
+      &-title
+        margin-bottom: 1.14rem
+        font-family: Yeseva One, cursive
+        font-style: normal
+        font-weight: normal
+        font-size: 1.071rem
+        line-height: 1.64rem
+        text-transform: uppercase
+        color: $primary
+      &-text
+        max-width: 24.07rem
+        font-style: normal
+        font-weight: normal
+        font-size: 1.071rem
+        line-height: 1.786rem
+    &-pagination 
+      position: absolute
+      text-align: center
+      transition: 300ms opacity
+      transform: translate3d(0, 0, 0)
+      z-index: 10
+    &-button
+      &-prev, &-next
+        position: absolute
+        //height: var(--swiper-navigation-size)
+        //margin-top: calc(-1 * var(--swiper-navigation-size) / 2)
+        z-index: 10
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        bottom: 0
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-prev
+        left: 0
+        background: url(../img/arrow-prev.svg) no-repeat center
+      &-next
+        background: url(../img/arrow-next.svg) no-repeat center
+.plan
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: 7rem
+  margin-bottom: 3.2rem
+  &__card
+    min-height: 5rem
+    max-width: 9.3rem
+    opacity: 0.3
+    &-active
+      opacity: 1
+    &-number
+      margin-bottom: 0.857rem
+      position: relative
+      font-family: Yeseva One, cursive
+      font-style: normal
+      font-weight: normal
+      font-size: 1.07rem
+      line-height: 1.5rem
+      text-transform: uppercase
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 16px
+        height: 1px
+        background-color: $primary
+    &-text
+      font-style: normal
+      font-weight: normal
+      font-size: 1.07rem
+      line-height: 1.2857rem

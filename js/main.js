@@ -19,7 +19,7 @@ $(document).ready(function () {
     };
   });
   
-  //Слайдер 
+  //Слайдер в секции "Завершённые проекты"
   var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     // Точки-индикаторы
@@ -41,6 +41,31 @@ $(document).ready(function () {
   // Расчёт позиции 
   projectsNext.css('left', projectsPrev.width() + 20 + projectsBullets.width() + 20); // Стрелка вперёд
   projectsBullets.css('left', projectsPrev.width() + 20);                             // Блок с точками-индикаторами
+
+
+  //Слайдер в секции "6 шагов до цели"
+  var mySwiper = new Swiper ('.steps__swiper-container', {
+    loop: true,
+    // Точки-индикаторы
+    pagination: {
+      el: '.steps__swiper-pagination',
+      type: 'bullets',
+    },
+    // Стрелки навигации
+    navigation: {
+      nextEl: '.steps__swiper-button-next',
+      prevEl: '.steps__swiper-button-prev',
+    },
+  });
+  // Получение элементов
+  var stepsNext = $('.steps__swiper-button-next');    // Стрелка вперёд
+  var stepsPrev = $('.steps__swiper-button-prev');    // Стрелка назад
+  var stepsBullets = $('.steps__swiper-pagination');  // Блок с точками-индикаторами
+
+  // Расчёт позиции 
+  stepsNext.css('left', stepsPrev.width() + 20 + stepsBullets.width() + 20); // Стрелка вперёд
+  stepsBullets.css('left', stepsPrev.width() + 20);
+
 
   // Инициализация библиотеки WOW
   new WOW().init();

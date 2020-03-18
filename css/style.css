@@ -610,6 +610,9 @@ img {
     list-style: none;
     padding: 0;
     z-index: 1; }
+  .projects__swiper-slide {
+    display: flex;
+    flex-wrap: wrap; }
   .projects__swiper-pagination {
     position: absolute;
     text-align: center;
@@ -635,23 +638,22 @@ img {
   .projects__swiper-button-next {
     background: url(../img/arrow-next.svg) no-repeat center; }
 
-.swiper-slide {
-  display: flex;
-  flex-wrap: wrap; }
-  .swiper-slide__text {
-    flex-basis: 34%;
-    margin-bottom: 1.35rem; }
-  .swiper-slide__heading {
-    font-size: 1.285rem;
-    line-height: 1.78rem;
-    font-family: 'Yeseva One', cursive;
-    color: #e3b873;
-    text-transform: uppercase;
-    font-weight: normal;
-    margin-bottom: 0.5rem; }
-  .swiper-slide__value {
-    font-size: 15px;
-    line-height: 20px; }
+.swiper-slide__text {
+  flex-basis: 34%;
+  margin-bottom: 1.35rem; }
+
+.swiper-slide__heading {
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  font-family: 'Yeseva One', cursive;
+  color: #e3b873;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0.5rem; }
+
+.swiper-slide__value {
+  font-size: 15px;
+  line-height: 20px; }
 
 .swiper-wrapper__content {
   margin-bottom: 5.5rem; }
@@ -782,7 +784,7 @@ img {
   color: #ffffff; }
 
 .design {
-  margin-bottom: -32rem; }
+  margin-bottom: -36rem; }
   .design__section-title {
     margin-bottom: 1.35rem; }
   .design__text {
@@ -803,6 +805,97 @@ img {
   padding-bottom: 30rem; }
   .steps__section-title-heading {
     font-size: 1.92rem; }
+  .steps__swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1; }
+  .steps__swiper-slide-number {
+    margin-bottom: 1.57rem;
+    font-family: Yeseva One, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2857rem;
+    line-height: 1.786rem;
+    text-transform: uppercase;
+    color: #ffffff; }
+  .steps__swiper-slide-title {
+    margin-bottom: 1.14rem;
+    font-family: Yeseva One, cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.071rem;
+    line-height: 1.64rem;
+    text-transform: uppercase;
+    color: #e3b873; }
+  .steps__swiper-slide-text {
+    max-width: 24.07rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.071rem;
+    line-height: 1.786rem; }
+  .steps__swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10; }
+  .steps__swiper-button-prev, .steps__swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    background-size: 42px;
+    width: 42px;
+    height: 14px; }
+    .steps__swiper-button-prev::after, .steps__swiper-button-next::after {
+      display: none; }
+  .steps__swiper-button-prev {
+    left: 0;
+    background: url(../img/arrow-prev.svg) no-repeat center; }
+  .steps__swiper-button-next {
+    background: url(../img/arrow-next.svg) no-repeat center; }
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+  margin-bottom: 3.2rem; }
+  .plan__card {
+    min-height: 5rem;
+    max-width: 9.3rem;
+    opacity: 0.3; }
+    .plan__card-active {
+      opacity: 1; }
+    .plan__card-number {
+      margin-bottom: 0.857rem;
+      position: relative;
+      font-family: Yeseva One, cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      text-transform: uppercase; }
+      .plan__card-number::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 16px;
+        height: 1px;
+        background-color: #e3b873; }
+    .plan__card-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 1.2857rem; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
@@ -956,7 +1049,11 @@ input.invalid {
     .footer__wrap {
       background: #131313; }
     .footer__input-group {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+  .steps {
+    display: none; }
+  .design {
+    margin-bottom: 15rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
