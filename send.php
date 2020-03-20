@@ -29,8 +29,9 @@ try {
   $mail->addAddress('kewin.rrrr@gmail.com');                  // Add a recipient
 
   // Content
+  $mail->CharSet = "UTF-8";
   $mail->isHTML(true);                                        // Set email format to HTML
-  $mail->Subject = "New application repair-dasing";
+  $mail->Subject = "Новое сообщение repair-dasing";
   $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}.";
 
   if ($mail->send()) {
