@@ -944,12 +944,13 @@ img {
       content: 'Приемка-сдача работ'; }
 
 .team {
-  margin-top: -35rem;
-  padding-bottom: 20rem; }
+  margin-top: -35rem; }
+  .team__suptitle-text {
+    max-width: 32rem;
+    margin-bottom: 5.285rem; }
   .team__text {
     max-width: 40rem;
     margin: auto;
-    margin-bottom: 4.285rem;
     text-align: center;
     font-size: 1.428rem;
     line-height: 2.45rem; }
@@ -989,6 +990,53 @@ img {
     height: 70px;
     background-color: #e3b873;
     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+
+.customers {
+  padding-bottom: 20rem; }
+  .customers__suptitle-text {
+    max-width: 25.714rem; }
+  .customers__card {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+    .customers__card-text {
+      position: relative; }
+    .customers__card-title {
+      display: flex;
+      align-items: center; }
+      .customers__card-title-img {
+        padding: 1.64rem; }
+    .customers__card-suptitle {
+      margin: 0 auto;
+      max-width: 23.14rem;
+      margin-bottom: 4.5rem;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.07rem;
+      line-height: 180%;
+      color: #959595; }
+    .customers__card-experience {
+      position: absolute;
+      left: 0;
+      bottom: -6.5rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      width: 20.93rem;
+      min-height: 3.8571rem;
+      box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+      .customers__card-experience-block {
+        flex-basis: 50%;
+        display: flex;
+        padding: 0.786rem;
+        padding-left: 1.214rem; }
+        .customers__card-experience-block:nth-child(2n+1) {
+          border-right: 1px solid #ffffff; }
+        .customers__card-experience-block-text {
+          margin: auto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.214rem;
+          line-height: 1.714rem;
+          text-transform: uppercase; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
