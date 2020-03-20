@@ -201,8 +201,8 @@ $(document).ready(function () {
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
+            center: [55.724236, 52.365735],
+            zoom: 10
         }, {
             searchControlProvider: 'yandex#search'
         }),
