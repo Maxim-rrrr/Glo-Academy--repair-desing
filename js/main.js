@@ -19,7 +19,7 @@ $(document).ready(function () {
     };
   });
   
-  //Слайдер в секции "Завершённые проекты"
+//Слайдер в секции "Завершённые проекты"
   var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     // Точки-индикаторы
@@ -43,7 +43,7 @@ $(document).ready(function () {
   projectsBullets.css('left', projectsPrev.width() + 20);                             // Блок с точками-индикаторами
 
 
-  //Слайдер в секции "6 шагов до цели"
+//Слайдер в секции "6 шагов до цели"
   var mySwiper = new Swiper ('.steps__swiper-container', {
     loop: true,
     // Точки-индикаторы
@@ -67,10 +67,11 @@ $(document).ready(function () {
   stepsBullets.css('left', stepsPrev.width() + 20);
 
 
-  // Инициализация библиотеки WOW
+// Инициализация библиотеки WOW
   new WOW().init();
 
-  // Валидация форм
+// Валидация форм
+  // Модальное окно
   $('.modal__form').validate({
     rules: {
       userName: {
@@ -100,9 +101,21 @@ $(document).ready(function () {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал, ответ с сервера', response);
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
     }
   });
-
+  // Форма в подвале
   $('.footer__form').validate({
     rules: {
       userName: {
@@ -130,9 +143,21 @@ $(document).ready(function () {
       userQuestion: {
         required: "Обязательно напишите вопрос",
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал, ответ с сервера', response);
+          $(form)[0].reset();
+        }
+      });
     }
   });
 
+  // Форма после секции "Контроль"
   $('.control__form').validate({
     rules: {
       userName: {
@@ -154,13 +179,24 @@ $(document).ready(function () {
       userPhone:{
         required: "Телефон обязательно",
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал, ответ с сервера', response);
+          $(form)[0].reset();
+        }
+      });
     }
   });
 
-  // Маска для номера телефона
+// Маска для номера телефона
   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
-  // Яндекс.карты
+// Яндекс.карты
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(function () {

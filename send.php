@@ -14,27 +14,30 @@ require 'phpmailer/Exception.php';
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 try {
-    //Server settings
-    $mail->SMTPDebug = 0;                                       // Enable verbose debug output
-    $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'aspirine20017270@gmail.com';           // SMTP username
-    $mail->Password   = 'maxi7270';                             // SMTP password
-    $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port       = 465;                                    // TCP port to connect to
+  //Server settings
+  $mail->SMTPDebug = 0;                                       // Enable verbose debug output
+  $mail->isSMTP();                                            // Send using SMTP
+  $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
+  $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+  $mail->Username   = 'aspirine20017270@gmail.com';           // SMTP username
+  $mail->Password   = 'maxi7270';                             // SMTP password
+  $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+  $mail->Port       = 465;                                    // TCP port to connect to
 
-    //Recipients
-    $mail->setFrom('aspirine20017270@gmail.com', 'repair-desing');
-    $mail->addAddress('kewin.rrrr@gmail.com');                  // Add a recipient
+  //Recipients
+  $mail->setFrom('aspirine20017270@gmail.com', 'repair-desing');
+  $mail->addAddress('kewin.rrrr@gmail.com');                  // Add a recipient
 
-    // Content
-    $mail->isHTML(true);                                        // Set email format to HTML
-    $mail->Subject = "New application repair-dasing";
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}.";
+  // Content
+  $mail->isHTML(true);                                        // Set email format to HTML
+  $mail->Subject = "New application repair-dasing";
+  $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}.";
 
-    $mail->send();
-    header('Location: thanks.html');
-} catch (Exception $e) {
+  if ($mail->send()) {
+    echo "Ok";
+  } else {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+  }
+} catch (Exception $e) {
+  echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
