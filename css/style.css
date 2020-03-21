@@ -1208,12 +1208,18 @@ input.invalid {
   .row {
     flex-direction: column;
     align-items: center; }
-  .types__card {
-    margin-bottom: 5rem; }
+  .types {
+    margin-top: 5.928rem; }
+    .types__row {
+      padding-bottom: 0; }
+    .types__card {
+      margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
   .design {
     background-color: #131313; }
+    .design__section-title {
+      padding-top: 2rem; }
     .design__text {
       color: #ffffff; }
     .design__section-title {
@@ -1237,15 +1243,19 @@ input.invalid {
       flex-basis: 100%; }
   .steps {
     display: none; }
-  .design {
-    margin-bottom: -5px; }
   .team {
-    margin-top: -9rem;
+    margin-top: 30rem;
     background-color: #131313; }
     .team__card {
       margin-bottom: 5.7rem; }
     .team__text {
-      display: none; } }
+      display: none; }
+  .customers__section-title {
+    margin-top: 5rem; }
+  .customers__row {
+    padding-bottom: 16rem; }
+  .customers__card {
+    margin-bottom: 5rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1268,6 +1278,7 @@ input.invalid {
   .hero__scroll-down {
     display: none; }
   .projects {
+    padding-top: 2.57rem;
     background: #131313; }
   .control {
     position: relative;
