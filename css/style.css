@@ -396,8 +396,14 @@ template {
 .col-30 {
   flex-basis: 30%; }
 
+.col-w30 {
+  width: 30%; }
+
 .col-50 {
   width: 50%; }
+
+.col-w70 {
+  width: 68%; }
 
 .justify-content-center {
   display: flex;
@@ -819,24 +825,37 @@ img {
 .types__row {
   padding-bottom: 10.7rem; }
 
-.design {
+.design__row {
   margin-bottom: -31rem; }
-  .design__section-title {
-    margin-bottom: 1.35rem; }
-  .design__text {
-    color: #363636; }
-  .design__pricetag {
-    bottom: -1rem;
-    padding-right: 5.5rem;
-    padding-left: 2.214rem; }
+
+.design__section-title {
+  margin-bottom: 1.35rem; }
+
+.design__text {
+  color: #363636; }
+
+.design__pricetag {
+  bottom: -1rem;
+  padding-right: 5.5rem;
+  padding-left: 2.214rem; }
 
 .steps {
-  padding-top: 29.5rem;
+  padding-top: 28.5rem;
   padding-bottom: 35.5rem;
   background: #131313 url(../img/line-dark-bg.svg) no-repeat;
   background-size: cover; }
-  .steps__section-title-heading {
-    font-size: 1.92rem; }
+  .steps__section-title {
+    margin-bottom: 6rem; }
+    .steps__section-title-heading {
+      margin-top: 1.15rem;
+      font-size: 1.92rem;
+      line-height: 2.64rem; }
+    .steps__section-title-word::after {
+      margin-left: 6.25rem; }
+  .steps__content {
+    margin-right: 7rem; }
+  .steps__img {
+    margin-top: 4rem; }
   .steps__swiper-container {
     margin-left: auto;
     margin-right: auto;
@@ -902,7 +921,7 @@ img {
   .plan__swiper-pagination > .swiper-pagination-bullet {
     background-color: transparent;
     flex-basis: 33%;
-    margin-top: 7rem;
+    margin-top: 3.6rem;
     margin-bottom: 3.2rem; }
     .plan__swiper-pagination > .swiper-pagination-bullet::before {
       content: '';

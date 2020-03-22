@@ -1,10 +1,21 @@
 .steps
-  padding-top: 29.5rem
+  padding-top: 28.5rem
   padding-bottom: 35.5rem
   background: $dark url(../img/line-dark-bg.svg) no-repeat
   background-size: cover
-  &__section-title-heading
-    font-size: 1.92rem
+  &__section-title
+    margin-bottom: 6rem
+    &-heading
+      margin-top: 1.15rem
+      font-size: 1.92rem
+      line-height: 2.64rem
+    &-word
+      &::after
+        margin-left: 6.25rem
+  &__content
+    margin-right: 7rem
+  &__img
+    margin-top: 4rem
   &__swiper
     &-container
       margin-left: auto
@@ -48,8 +59,6 @@
     &-button
       &-prev, &-next
         position: absolute
-        //height: var(--swiper-navigation-size)
-        //margin-top: calc(-1 * var(--swiper-navigation-size) / 2)
         z-index: 10
         cursor: pointer
         display: flex
@@ -75,7 +84,7 @@
     &>.swiper-pagination-bullet
       background-color: transparent
       flex-basis: 33%
-      margin-top: 7rem
+      margin-top: 3.6rem
       margin-bottom: 3.2rem
       &::before
         content: ''
