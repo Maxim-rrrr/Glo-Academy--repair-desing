@@ -536,9 +536,7 @@ img {
   color: #ffffff; }
 
 .control-types-bg, .team-customers-bg {
-  background: url(../img/control-bg.svg) no-repeat;
-  background-size: cover;
-  background-position: center 100%; }
+  background: url(../img/lines-bg-control.svg) no-repeat center/cover; }
 
 .header {
   position: fixed;
@@ -672,9 +670,7 @@ img {
 .projects {
   padding-top: 12.57rem;
   padding-bottom: 30rem;
-  background: #131313 url(../img/progects-bg.svg) no-repeat;
-  background-size: cover;
-  background-position: center 80%; }
+  background: url(../img/lines-bg-hero.svg) no-repeat center/cover, url(../img/bg-sity-progect.svg) no-repeat left bottom, #131313 url(../img/bg-sity-progect.svg) no-repeat right bottom; }
   .projects__section-title-heading {
     font-size: 1.92rem; }
   .projects__swiper-container {
@@ -842,7 +838,7 @@ img {
 .steps {
   padding-top: 28.5rem;
   padding-bottom: 35.5rem;
-  background: #131313 url(../img/line-dark-bg.svg) no-repeat;
+  background: #131313 url(../img/lines-bg-hero.svg) no-repeat center/cover;
   background-size: cover; }
   .steps__section-title {
     margin-bottom: 6rem; }
@@ -1076,7 +1072,7 @@ img {
     margin-top: -15.7rem;
     margin-bottom: 2.14rem;
     background-color: #181818;
-    background: #131313 url(../img/line-dark-bg.svg) no-repeat;
+    background: #131313 url(../img/lines-bg-hero.svg) no-repeat center/cover;
     background-size: cover; }
   .footer__title {
     margin-bottom: 3.1rem;
@@ -1171,7 +1167,7 @@ img {
     position: relative;
     max-width: 36.36rem;
     padding: 2.357rem 3.5rem 1.928rem;
-    background: #131313 url(../img/bg-lines.svg) no-repeat center;
+    background: #131313 url(../img/bg-line-modal.svg) no-repeat center/cover;
     color: #ffffff; }
   .modal__close {
     position: absolute;

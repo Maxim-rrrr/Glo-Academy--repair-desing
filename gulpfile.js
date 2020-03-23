@@ -80,10 +80,11 @@ function buildFonts(done) {
 };
 
 function imgMin(done) {
-    src('img/**/**')
+    src('img/**/*.jpg')
         .pipe(tinypng({key: 'qCMljd7n0TwTVKTdbHQqSKXS0PpmgkpP',}))
         .pipe(dest('dist/img/'));
-
+    src('img/**/*.png')
+        .pipe(dest('dist/img/'));
     src('img/**/*.svg')
         .pipe(dest('dist/img/'));
     done();
