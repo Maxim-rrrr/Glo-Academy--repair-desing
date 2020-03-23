@@ -1142,7 +1142,7 @@ img {
   .footer__map {
     margin: 0 auto 4rem;
     max-width: 66rem;
-    min-height: 33.214rem;
+    height: 33.214rem;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .footer__menu {
@@ -1260,6 +1260,8 @@ input.invalid {
       background: #131313; }
     .footer__input-group {
       flex-basis: 100%; }
+    .footer__map {
+      height: 255px; }
   .steps {
     display: none; }
   .team {
