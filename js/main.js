@@ -19,6 +19,18 @@ $(document).ready(function () {
     };
   });
   
+  //
+  var modalThanks = $('.modal-thanks');                    //Модальное окно
+        
+  //Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
+  modalThanks.on('click', () => {
+    if (event.target.className === "modal__close-thanks" || event.target.className === "modal-thanks modal--visible") {
+
+      modalThanks.toggleClass('modal--visible');
+
+    };
+  });
+
 //Слайдер в секции "Завершённые проекты"
   var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
@@ -119,7 +131,7 @@ $(document).ready(function () {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          document.location.href = "thanks.html";
+          modalThanks.toggleClass('modal--visible');
           ym(61250854,'reachGoal','form')
         }
       });
@@ -170,7 +182,7 @@ $(document).ready(function () {
         success: function (response) {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
-          document.location.href = "thanks.html";
+          modalThanks.toggleClass('modal--visible');
           ym(61250854,'reachGoal','form')
         }
       });
@@ -214,7 +226,7 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          document.location.href = "thanks.html";
+          modalThanks.toggleClass('modal--visible');
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
           ym(61250854,'reachGoal','form')

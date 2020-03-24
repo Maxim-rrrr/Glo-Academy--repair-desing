@@ -1421,6 +1421,30 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(19, 19, 19, 0.6); }
+  .modal-thanks {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 199;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.6); }
   .modal--visible {
     opacity: 1;
     visibility: visible; }
@@ -1430,6 +1454,16 @@ img {
     padding: 2.357rem 3.5rem 1.928rem;
     background: #131313 url(../img/bg-line-modal.svg) no-repeat center/cover;
     color: #ffffff; }
+    .modal__dialog-thanks {
+      position: relative;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+      width: 100%;
+      max-width: 53rem;
+      background: #131313 url(../img/bg-line-modal.svg) no-repeat center/cover;
+      color: #ffffff; }
+      .modal__dialog-thanks > .modal__title {
+        font-size: 2rem; }
   .modal__close {
     position: absolute;
     top: 0;
@@ -1440,6 +1474,16 @@ img {
     border: none;
     margin: 12px;
     cursor: pointer; }
+    .modal__close-thanks {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      height: 28px;
+      background: transparent url(../img/close.svg) no-repeat center;
+      border: none;
+      margin: 12px;
+      cursor: pointer; }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
