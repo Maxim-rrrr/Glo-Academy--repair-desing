@@ -96,6 +96,11 @@ function buildTxt(done) {
     done();
 };
 
+function buildTextolite(done) {
+    src('textolite/**')
+        .pipe(dest('dist/textolite/'));
+    done();
+};
 
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, buildHTML, buildPHP, buildFonts, imgMin, buildTxt);
+exports.build = series(buildCSS, buildJS, buildHTML, buildPHP, buildFonts, imgMin, buildTxt, buildTextolite);
