@@ -81,10 +81,14 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
+        minlength: 18,
       },
       userEmail: {
         required: true,
         email: true,
+      },
+      policyCheckbox: {
+        required: true
       }
     },
     errorClass: "invalid",
@@ -96,11 +100,15 @@ $(document).ready(function () {
       },
       userPhone:{
         required: "Телефон обязательно",
+        minlength: "Введите телефон полностью",
       },
       userEmail: {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
-      }
+      },
+      policyCheckbox:{
+        required: "Нужно поставить галочку",
+      },
     },
     submitHandler: function(form) {
       $.ajax({
@@ -125,9 +133,13 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
+        minlength: 18,
       },
       userQuestion: {
         required: true,
+      },
+      policyCheckbox: {
+        required: true
       }
     },
     errorClass: "invalid",
@@ -139,10 +151,14 @@ $(document).ready(function () {
       },
       userPhone:{
         required: "Телефон обязательно",
+        minlength: "Введите телефон полностью",
       },
       userQuestion: {
         required: "Обязательно напишите вопрос",
-      }
+      },
+      policyCheckbox:{
+        required: "Нужно поставить галочку",
+      },
     },
     submitHandler: function(form) {
       $.ajax({
@@ -167,6 +183,10 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
+        minlength: 18,
+      },
+      policyCheckbox: {
+        required: true
       }
     },
     errorClass: "invalid",
@@ -178,6 +198,10 @@ $(document).ready(function () {
       },
       userPhone:{
         required: "Телефон обязательно",
+        minlength: "Введите телефон полностью",
+      },
+      policyCheckbox: {
+        required: "Нужно поставить галочку"
       }
     },
     submitHandler: function(form) {

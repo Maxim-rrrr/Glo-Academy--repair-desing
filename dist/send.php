@@ -1,5 +1,6 @@
 <?php
 
+
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
@@ -17,11 +18,11 @@ try {
   //Server settings
   $mail->SMTPDebug = 0;                                       // Enable verbose debug output
   $mail->isSMTP();                                            // Send using SMTP
-  $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
+  $mail->Host       = "smtp.gmail.com";                        // Set the SMTP server to send through
   $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
   $mail->Username   = 'aspirine20017270@gmail.com';           // SMTP username
   $mail->Password   = 'maxi7270';                             // SMTP password
-  $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+  $mail->SMTPSecure = 'PHPMailer::ENCRYPTION_STARTTLS';                                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
   $mail->Port       = 465;                                    // TCP port to connect to
 
   //Recipients
@@ -32,7 +33,10 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->isHTML(true);                                        // Set email format to HTML
   $mail->Subject = "Новое сообщение repair-dasing";
-  $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}.";
+  $mail->Body    = "Имя пользователя: ${userName}<br>
+                    Телефон: ${userPhone}<br>
+                    Почта: ${userEmail}<br>
+                    Вопрос: ${userQuestion}";
 
   if ($mail->send()) {
     echo "Ok";

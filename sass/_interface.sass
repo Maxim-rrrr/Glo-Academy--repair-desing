@@ -36,6 +36,7 @@
     &::placeholder
       color: $light
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
@@ -57,5 +58,18 @@
       margin-right: 0.6rem
     &--center
       justify-content: center
+label
+  &.invalid
+    color: tomato
+    &:first-of-type
+      display: block
+      position: absolute
+      bottom: -2.2rem
+      left: 0
+      width: 100%
+      padding-top: 0.5rem
+      border-top: 1px solid tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
 
-      

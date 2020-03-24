@@ -362,26 +362,41 @@ template {
   .input--light::placeholder {
     color: #ffffff; }
 
-.policy__checkbox {
-  opacity: 0;
-  visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
-    background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
+.policy {
+  position: relative; }
+  .policy__checkbox {
+    opacity: 0;
+    visibility: hidden; }
+    .policy__checkbox:checked + .policy__label::before {
+      background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
+  .policy__label {
+    display: flex;
+    align-items: center;
+    font-size: 1.142rem; }
+    .policy__label::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border: 1px solid #e3b873;
+      border-radius: 1px;
+      cursor: pointer;
+      margin-right: 0.6rem; }
+    .policy__label--center {
+      justify-content: center; }
 
-.policy__label {
-  display: flex;
-  align-items: center;
-  font-size: 1.142rem; }
-  .policy__label::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    border: 1px solid #e3b873;
-    border-radius: 1px;
-    cursor: pointer;
-    margin-right: 0.6rem; }
-  .policy__label--center {
-    justify-content: center; }
+label.invalid {
+  color: tomato; }
+  label.invalid:first-of-type {
+    display: block;
+    position: absolute;
+    bottom: -2.2rem;
+    left: 0;
+    width: 100%;
+    padding-top: 0.5rem;
+    border-top: 1px solid tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .container {
   width: 85%;
@@ -746,7 +761,7 @@ img {
   margin: 0 9px; }
 
 .control__section-title {
-  margin-bottom: 2.214rem;
+  margin-bottom: 3.214rem;
   margin-top: -25rem; }
 
 .control__video {
@@ -813,11 +828,16 @@ img {
     font-size: 1.143rem;
     line-height: 1.57rem; }
 
+.control__policy > label.invalid {
+  width: 35%;
+  left: 33%; }
+
 .video__play {
   position: relative;
   margin: auto; }
 
 .types__section-title {
+  margin-top: 4rem;
   margin-bottom: 2rem; }
 
 .types__row {
@@ -1200,12 +1220,6 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
-
-label.invalid {
-  color: tomato; }
-
-input.invalid {
-  border-bottom: 1px solid tomato; }
 
 @media screen and (max-width: 1200px) {
   html {
