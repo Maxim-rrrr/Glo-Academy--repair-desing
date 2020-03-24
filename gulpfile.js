@@ -90,6 +90,12 @@ function imgMin(done) {
     done();
 };
 
+function buildTxt(done) {
+    src('**.txt')
+        .pipe(dest('dist/'));
+    done();
+};
+
 
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, buildHTML, buildPHP, buildFonts, imgMin);
+exports.build = series(buildCSS, buildJS, buildHTML, buildPHP, buildFonts, imgMin, buildTxt);
