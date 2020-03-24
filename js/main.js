@@ -119,6 +119,7 @@ $(document).ready(function () {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          document.location.href = "thanks.html";
         }
       });
     }
@@ -168,6 +169,7 @@ $(document).ready(function () {
         success: function (response) {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
+          document.location.href = "thanks.html";
         }
       });
     }
@@ -212,6 +214,7 @@ $(document).ready(function () {
         success: function (response) {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
+          document.location.href = "thanks.html";
         }
       });
     }
