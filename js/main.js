@@ -212,9 +212,9 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
+          document.location.href = "thanks.html";
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
-          document.location.href = "thanks.html";
         }
       });
     }
@@ -222,6 +222,7 @@ $(document).ready(function () {
 
 // Маска для номера телефона
   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
 
 });
 /*

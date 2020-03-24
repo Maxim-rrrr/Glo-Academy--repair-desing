@@ -10,6 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/Maxim-rrrr/repair-desing.git"
   },
+  "browserslist": [
+    "> 1%",
+    "ie >= 11",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -27,6 +40,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
+    "codyhouse-framework": "^2.5.5",
     "gulp-htmlmin": "^5.0.1",
     "gulp-minifier": "^3.5.0",
     "gulp-tinypng-compress": "^1.2.5",
