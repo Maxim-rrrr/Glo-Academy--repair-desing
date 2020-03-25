@@ -2,8 +2,14 @@
   padding-top: 12.57rem
   padding-bottom: 30rem
   background: url(../img/lines-bg-hero.svg) no-repeat center / cover, url(../img/bg-sity-progect.svg) no-repeat left bottom, $dark url(../img/bg-sity-progect.svg) no-repeat right bottom
-  &__section-title-heading
-    font-size: 1.92rem
+  &__section-title
+    &-heading
+      margin-bottom: 1.7rem
+      font-size: 1.92rem
+      line-height: 2.64rem
+      letter-spacing: -0.07em
+    &-text
+      margin-bottom: 3.5rem
   &__swiper
     &-container
       margin-left: auto
@@ -15,7 +21,18 @@
       z-index: 1
     &-slide
       display: flex
-      flex-wrap: wrap
+      flex-direction: column
+      &>img
+        max-width: 110%
+        width: 110% 
+      &-row
+        display: flex
+        margin-bottom: 2.7rem
+        &:last-of-type
+          margin-bottom: 1.5rem
+      &-text
+        padding-bottom: 0rem
+        margin-right: 0rem
     &-pagination 
       position: absolute
       text-align: center
@@ -47,8 +64,7 @@
 .swiper
   &-slide
     &__text
-      flex-basis: 34%
-      margin-bottom: 1.35rem
+      flex-basis: 30%
     &__heading
       font-size: 1.285rem
       line-height: 1.78rem

@@ -84,8 +84,8 @@ $(document).ready(function () {
   var stepsBullets = $('.steps__swiper-pagination');  // Блок с точками-индикаторами
 
   // Расчёт позиции 
-  stepsNext.css('left', stepsPrev.width() + 20 + stepsBullets.width() + 20); // Стрелка вперёд
-  stepsBullets.css('left', stepsPrev.width() + 20);
+  stepsNext.css('left', stepsPrev.width() + 19 + stepsBullets.width() + 19); // Стрелка вперёд
+  stepsBullets.css('left', stepsPrev.width() + 19);
 
 
 // Инициализация библиотеки WOW
@@ -113,6 +113,7 @@ $(document).ready(function () {
       }
     },
     errorClass: "invalid",
+    
     messages: {
       userName: {
         required: "Имя обязательно",
@@ -242,6 +243,24 @@ $(document).ready(function () {
         }
       });
     }
+  });
+
+  $('#modal-policy-checkbox').on('click', () => {
+    
+    $('#modalCheckLabel').toggleClass('check');
+        
+  });
+  
+  $('#footer-policy-checkbox').on('click', () => {
+    
+    $('#footerCheckLabel').toggleClass('check');
+        
+  });
+  
+  $('#control-policy-checkbox').on('click', () => {
+    
+    $('#controlCheckLabel').toggleClass('check');
+        
   });
 
 // Маска для номера телефона
