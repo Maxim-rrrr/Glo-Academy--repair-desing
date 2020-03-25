@@ -7,6 +7,19 @@
     <title>Repair Design Project</title>
     <link rel="shortcut icon" href="img/repair.svg" type="image/png">
 
+    <!-- Cody House --> 
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <script>
+      if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        document.write('<link rel="stylesheet" href="css/style-codyhouse.css">');
+      } else {
+        document.write('<link rel="stylesheet" href="css/style-fallback.css">');
+      }
+    </script>
+    <noscript>
+      <link rel="stylesheet" href="css/style-fallback.css">
+    </noscript>
+
     <!-- Шрифт Yeseva One -->
     <!-- font-family: 'Yeseva One', cursive; -->
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
@@ -19,10 +32,15 @@
 
     <!-- style.css -->  <!-- Основной CSS файл-->
     <link rel="stylesheet" href="css/style.css">
-
+    
 </head>
 
 <body>
+  <!-- Cody House -->
+  <!-- Кнопка вернуться назад -->
+  <a class="back-to-top js-back-to-top" href="#" data-offset="100" data-duration="300">
+    <svg class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+  </a>
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
@@ -215,7 +233,7 @@
       <section class="section control">
         <div class="container">
             <div class="section-title control__section-title section-title--light">
-                <h2 class="section-title__heading wow fadeIn" data-wow-delay="0.3s">онлайн контроль</h2>
+                <h2 class="section-title__heading section-title__heading--light wow fadeIn" data-wow-delay="0.3s">онлайн контроль</h2>
                 <!-- /.section-title__heading -->
                 <div class="section-title__image wow fadeIn" data-wow-delay="0.3s">
                     <img src="img/Video.svg" alt="video">
@@ -663,7 +681,7 @@
       <section class="section section team">
         <div class="container">
           <div class="section-title section-title--light team__section-title">
-            <h2 class="section-title__heading wow fadeIn" data-wow-delay="0.3s">Наша команда</h2>
+            <h2 class="section-title__heading section-title__heading--light wow fadeIn" data-wow-delay="0.3s">Наша команда</h2>
             <!-- /.section-title__heading -->
             <div class="section-title__image team__title-image wow fadeIn" data-wow-delay="0.3s">
                 <img src="img/team.svg" alt="team">
@@ -989,6 +1007,9 @@
   </div>
   <!-- /.modal -->
 
+  
+  <!-- Cody House --> 
+  <script src="js/scripts_codyhouse.js"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!-- Swiper -->

@@ -464,6 +464,9 @@ body {
 img {
   max-width: 100%; }
 
+h1 {
+  color: #ffffff; }
+
 .section--dark {
   background-color: #131313;
   color: #ffffff; }
@@ -498,6 +501,8 @@ img {
     font-size: 1.4286rem;
     line-height: 2rem;
     margin-bottom: 0.6rem; }
+    .section-title__heading--light {
+      color: #ffffff; }
     .section-title__heading--primary {
       color: #e3b873; }
   .section-title__word {
@@ -1276,7 +1281,8 @@ img {
     font-weight: normal;
     font-size: 1.43rem;
     line-height: 2rem;
-    text-align: center; }
+    text-align: center;
+    color: #ffffff; }
   .footer__form {
     display: -webkit-box;
     display: -webkit-flex;
