@@ -69,6 +69,7 @@ $(document).ready(function () {
     pagination: {
       el: '.steps__swiper-pagination,.plan__swiper-pagination',
       type: 'bullets',
+      clickable: true
     },
     // Стрелки навигации
     navigation: {
@@ -269,19 +270,15 @@ $(document).ready(function () {
   var check_if_load = 0;
   var myMapTemp, myPlacemarkTemp;
   
-  
-  var spinner = $('.ymap-container').children('.loader');
-  var check_if_load = 0;
-  var myMapTemp, myPlacemarkTemp;
-  
-  
   function init () {
     var myMapTemp = new ymaps.Map("map-yandex", {
       center: [47.244729, 39.723187],
       zoom: 18,
       controls: ['zoomControl', 'fullscreenControl']
     });
-  
+    
+    myMapTemp.behaviors.disable('scrollZoom');
+
     var myPlacemarkTemp = new ymaps.Placemark([47.244729, 39.723187], {
         balloonContent: "Офис Repair Design Project",
     }, {
@@ -384,6 +381,31 @@ $(document).ready(function () {
     //Map Yandex
     ymap();
   
+  });
+
+  // Плавная прокрутка при нажатие на якорную ссылку
+  jQuery(function($){
+    $('a[href*="#"]').on('click.smoothscroll', function (e) {
+    var hash = this.hash,
+        _hash = hash.replace(/#/, ''),
+        theHref = $(this).attr('href').replace(/#.*/, '');
+
+    if (theHref && location.href.replace(/#.*/, '') != theHref) return;
+
+      var $target = _hash === '' ? $('body') : $(hash + ', a[name="' + _hash + '"]').first();
+
+      if (!$target.length) return;
+
+      e.preventDefault();
+      
+      $('html, body').stop().animate({
+        scrollTop: $target.offset().top - 0
+      }, 400, 'swing', function () {  // 400 это время прокрутки в миллисекундах
+        window.location.hash = hash;
+      });
+
+    });
+
   });
 
 });

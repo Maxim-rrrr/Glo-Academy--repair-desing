@@ -1106,7 +1106,7 @@ h1 {
     .plan__swiper-pagination > .swiper-pagination-bullet::after {
       content: '';
       display: block;
-      margin-top: 0.857rem;
+      padding-top: 0.857rem;
       max-width: 9.14rem;
       font-style: normal;
       font-weight: normal;
@@ -1239,7 +1239,7 @@ h1 {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0;
-    width: 20.93rem;
+    max-width: 20.93rem;
     min-height: 3.8571rem;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
     .customers__card-experience-block {
