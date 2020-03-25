@@ -368,8 +368,6 @@ template {
   .policy__checkbox {
     opacity: 0;
     visibility: hidden; }
-    .policy__checkbox:checked + .policy__label::before {
-      background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
   .policy__label {
     display: -webkit-box;
     display: -webkit-flex;
@@ -407,6 +405,9 @@ label.invalid {
 
 input.invalid {
   border-bottom: 1px solid tomato; }
+
+.check::before {
+  background: #e3b873 url(../img/check.svg) no-repeat center/0.8rem; }
 
 .container {
   width: 85%;

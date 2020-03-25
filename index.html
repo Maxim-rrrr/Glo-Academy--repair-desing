@@ -75,8 +75,7 @@
         
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-            <button onclick="ym('92488375', 'reachGoal', 'button'); return true;"
-              class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+            <button onclick="ym(61250854,'reachGoal','button'); return true;"class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
           </div>
           <!-- /.contacts -->
         </div>
@@ -88,25 +87,24 @@
   <main class="main">
     <section class="hero">
         <div class="instagram hero__instagram">
-          <a href="#" class="instagram__link">Instagram</a>
+          <a href="https://www.instagram.com/" class="instagram__link">Instagram</a>
         </div>
         
         <div class="container">
             <div class="hero__content">
                 <h1 class="title hero__title  wow fadeInRight" data-wow-delay="0.1s">турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
                 <p class="hero__text  wow fadeInRight" data-wow-delay="0.3s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-                <button class="button hero__button button--primary wow fadeInRight" data-wow-delay="0.5s">Рассчитать стоимость</button>
-                <button class="button hero__button button--outline wow fadeInRight" data-wow-delay="0.5s">Отправить заявку</button>
+                <button class="button hero__button button--primary wow fadeInRight" data-wow-delay="0.5s" data-toggle="modal" onclick="ym(61250854,'reachGoal','button'); return true;">Рассчитать стоимость</button>
+                <button class="button hero__button button--outline wow fadeInRight" data-wow-delay="0.5s" data-toggle="modal" onclick="ym(61250854,'reachGoal','button'); return true;">Отправить заявку</button>
             </div>
             <!-- /.hero__content -->
         </div>
         <!-- /.container -->
 
-        <a href="#" class="hero__scroll-down">листайте вниз</a>
+        <a href="#projects" class="hero__scroll-down">листайте вниз</a>
     </section>
     <!-- /.hero -->
-    <a name="projects"></a>
-    <section class="section section--dark projects">
+    <section class="section section--dark projects" id="projects">
       <div class="container">
        
         <div class="row">
@@ -228,7 +226,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section section--dark projects -->
+    <!-- /.section projects -->
 
     <div class="control-types-bg">
       <section class="section control">
@@ -274,7 +272,7 @@
 
               <div class="policy control__policy">
                 <input type="checkbox" name="policyCheckbox" class="policy__checkbox" id="control-policy-checkbox" checked>
-                <label for="control-policy-checkbox" class="policy__label control__policy-label"> Я соглашаюсь с обработкой данных</label>
+                <label for="control-policy-checkbox" class="policy__label control__policy-label check" id="controlCheckLabel"> Я соглашаюсь с обработкой данных</label>
               </div>
               <!-- /.policy -->
 
@@ -513,8 +511,8 @@
         <!-- /.container -->
     </section>
     <!-- /.section design -->
-    <a name="steps"></a>
-    <section class="section section--dark steps">
+    
+    <section class="section section--dark steps" id="steps">
       <div class="container">
         
         <div class="row">
@@ -675,12 +673,11 @@
 
       </div>
       <!-- /.container -->
-      <a name="team"></a>
     </section>
-    <!-- /.section section--dark steps -->
+    <!-- /.section steps -->
 
     <div class="team-customers-bg">
-      <section class="section section team">
+      <section class="section section team" id="team">
         <div class="container">
           <div class="section-title section-title--light team__section-title">
             <h2 class="section-title__heading section-title__heading--light wow fadeIn" data-wow-delay="0.3s">Наша команда</h2>
@@ -761,8 +758,7 @@
         <!-- /.container -->
       </section>
       <!-- /.team -->
-      <a name="customers"></a>
-      <section class="section customers">
+      <section class="section customers" id="customers">
         <div class="container">
           <div class="section-title customers__section-title">
             <h2 class="section-title__heading wow fadeIn" data-wow-delay="0.3s">Наши клиенты</h2>
@@ -880,10 +876,9 @@
 
   </main>
 
-  <footer class="footer section--dark">
+  <footer class="footer section--dark" id="contacts">
     <div class="container">
       <div class="footer__wrap">
-        <a name="contacts"></a>
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
@@ -906,7 +901,7 @@
 
           <div class="policy footer__policy">
             <input type="checkbox" name="policyCheckbox" class="policy__checkbox" id="footer-policy-checkbox" checked>
-            <label for="footer-policy-checkbox" class="policy__label policy__label--center"> Я соглашаюсь с обработкой данных</label>
+            <label for="footer-policy-checkbox" class="policy__label policy__label--center check"  id="footerCheckLabel"> Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="button button--primary footer__button">Отправить</button>
@@ -988,7 +983,7 @@
 
         <div class="policy modal__policy">
           <input type="checkbox" name="policyCheckbox" class="policy__checkbox" id="modal-policy-checkbox" checked>
-          <label for="modal-policy-checkbox" class="policy__label"> Я соглашаюсь с обработкой данных</label>
+          <label for="modal-policy-checkbox" class="policy__label check" id="modalCheckLabel" > Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
 

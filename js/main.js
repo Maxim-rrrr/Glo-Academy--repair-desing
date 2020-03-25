@@ -19,8 +19,8 @@ $(document).ready(function () {
     };
   });
 
-  window.addEventListener("keydown", function(e){
-    if (e.keyCode == 27) {
+  window.addEventListener("keydown", function(event){
+    if (event.keyCode == 27) {
       modal.removeClass('modal--visible');
       modalThanks.removeClass('modal--visible');
     }
@@ -45,6 +45,7 @@ $(document).ready(function () {
     pagination: {
       el: '.projects__swiper-pagination',
       type: 'bullets',
+      clickable: true
     },
     // Стрелки навигации
     navigation: {
@@ -112,6 +113,7 @@ $(document).ready(function () {
       }
     },
     errorClass: "invalid",
+    
     messages: {
       userName: {
         required: "Имя обязательно",
@@ -243,8 +245,26 @@ $(document).ready(function () {
     }
   });
 
+  $('#modal-policy-checkbox').on('click', () => {
+    
+    $('#modalCheckLabel').toggleClass('check');
+        
+  });
+  
+  $('#footer-policy-checkbox').on('click', () => {
+    
+    $('#footerCheckLabel').toggleClass('check');
+        
+  });
+  
+  $('#control-policy-checkbox').on('click', () => {
+    
+    $('#controlCheckLabel').toggleClass('check');
+        
+  });
+
 // Маска для номера телефона
-  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7 (000) 000-00-00');
 
 // Видео в секции "Контроль"
   var player;
@@ -392,7 +412,7 @@ $(document).ready(function () {
 
     if (theHref && location.href.replace(/#.*/, '') != theHref) return;
 
-      var $target = _hash === '' ? $('body') : $(hash + ', a[name="' + _hash + '"]').first();
+      var $target = _hash === '' ? $('body') : $(hash + ', a[id="' + _hash + '"]').first();
 
       if (!$target.length) return;
 
