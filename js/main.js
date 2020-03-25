@@ -1,32 +1,39 @@
-//jQuery
-//Всё обёрнуто в эту функцию чтобы запускалось всё после полной прогрузки страницы
+// jQuery
+// Всё обёрнуто в эту функцию чтобы запускалось всё после полной прогрузки страницы
 $(document).ready(function () {
-  //получение элементов
+  // Получение элементов
   var modal = $('.modal'),                    //Модальное окно
       modalBtn = $('[data-toggle=modal]');    // все элементы вызывающие модальное окно
 
-  //Вункция вызова модального окна
+  // Вункция вызова модального окна
   modalBtn.on('click', () => {
     modal.toggleClass('modal--visible');
   });
       
-  //Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
+  // Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
   modal.on('click', () => {
     if (event.target.className === "modal__close" || event.target.className === "modal modal--visible") {
 
-      modal.toggleClass('modal--visible');
+      modal.removeClass('modal--visible');
 
     };
   });
+
+  window.addEventListener("keydown", function(e){
+    if (e.keyCode == 27) {
+      modal.removeClass('modal--visible');
+      modalThanks.removeClass('modal--visible');
+    }
+  }, true);
   
-  //
-  var modalThanks = $('.modal-thanks');                    //Модальное окно
+  // 
+  var modalThanks = $('.modal-thanks');                    // Модальное окно
         
-  //Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
+  // Вункция закрытия модального окна нажатием на крестик или на поле вокруг модального окна
   modalThanks.on('click', () => {
     if (event.target.className === "modal__close-thanks" || event.target.className === "modal-thanks modal--visible") {
 
-      modalThanks.toggleClass('modal--visible');
+      modalThanks.removeClass('modal--visible');
 
     };
   });
