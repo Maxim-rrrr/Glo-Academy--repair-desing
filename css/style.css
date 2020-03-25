@@ -452,7 +452,8 @@ input.invalid {
   justify-content: center; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 html {
   font-size: 14px; }
@@ -1577,7 +1578,8 @@ h1 {
     font-size: 1.357rem;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem; }
+    margin-bottom: 2.428rem;
+    color: #ffffff; }
   .modal__form {
     display: -webkit-box;
     display: -webkit-flex;
