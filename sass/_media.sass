@@ -22,24 +22,69 @@
     flex-direction: column
     align-items: center
   .types
-    margin-top: 5.928rem
+    margin-top: 0rem
+    &__section-title
+      margin-bottom: 3rem 
+      &-heading
+        margin-bottom: 1rem 
     &__row
       padding-bottom: 0
     &__card
-      margin-bottom: 5rem
+      margin-bottom: 6.5rem
+    &__card-text
+      max-width: 22rem
+      padding-left: 2.5rem
+      margin-top: -11.8rem
+      &>.card__list
+        margin-bottom: 1.5rem
+        &>.card__item
+          margin-bottom: 0.1rem
+      &>.card__pricetag
+        padding-top: 0.8rem
+        padding-bottom: 0.8rem
   .card
     &__text
       margin-left: 0
   .design
     background-color: $dark
+    &__row
+      margin-bottom: 14.5rem
     &__section-title
       padding-top: 2rem
+      &-heading
+        margin-bottom: 1.3rem 
     &__text
+      max-width: 90%
       color: $light
+      font-size: 15px
+      line-height: 135.84%
     &__section-title
       color: $light
     &__card
-      margin-bottom: 5.7rem
+      margin-bottom: 6.5rem
+      &-text
+        margin-top: -12rem
+        padding: 0
+        padding-top: 1.87rem
+        padding-left: 2.6rem
+        padding-bottom: 1rem
+        max-width: 22.5rem 
+        &>.card__list
+          margin-top: 0.8rem
+          &>.card__item
+            margin-bottom: 0.1rem
+        &>.card__pricetag
+          bottom: -1.5rem
+          padding-right: 3.8rem 
+          padding-left: 4rem
+          padding-top: 0.8rem
+          padding-bottom: 0.8rem
+  .design__last-card-list>.card__item
+    &:nth-child(n+8)
+      display: none
+    &:nth-child(7)
+      &::after
+        content: '...'
   .col-50
     width: 100%
   .col-project__content
@@ -51,16 +96,70 @@
   .control
     &__video
       min-height: 300px
+    &__form
+      margin-bottom: 6.5rem 
   .footer
     padding-top: 0
     background: $dark
+    &__title
+      font-size: 20px
+      line-height: 28px
+      margin-bottom: 2rem
     &__wrap
       background: $dark
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 1rem
+      margin-bottom: 0
     &__input
+      font-size: 18px
+      line-height: 24px
       &-group
+        margin-top: 1.8rem
         flex-basis: 100%
+        &:last-of-type
+          margin-bottom: 0
+    &__policy-label
+      margin-top: -1.5rem
+      margin-bottom: 2rem
+      justify-content: start
+      font-size: 16px
+      line-height: 22px
+    &__form-labet
+      font-size: 15px
+      line-height: 20px
+      margin-bottom: -0.3rem
+    &__button
+      width: 100%
+      font-size: 15px
+      line-height: 26px
     &__map
-      height: 255px
+      width: 100%
+      margin-bottom: 0  
+    &__contacts-map
+      display: flex
+      flex-direction: column-reverse
+    &__contacts
+      margin: 0 auto
+      padding-top: 0rem
+      margin-top: -6rem
+      max-width: 26rem
+      font-size: 18px
+      line-height: 138.6%
+      &-link
+        margin-top: 0.3rem
+        margin-bottom: 38px
+        width: 40px
+        height: 40px
+        &-block
+          width: 8rem
+    &__menu
+      display: none
+  .ymap-container
+    max-height: 300px
+    margin-bottom: 0 
+  #map-yandex
+    height: 250px
   .steps
     display: none
   .team
@@ -72,12 +171,29 @@
       display: none
   .customers
     &__section-title
-      margin-top: 5rem
     &__row
       padding-bottom: 16rem
     &__card
       margin-bottom: 5rem
+    
 @media screen and ( max-width: 570px )
+  .container
+    width: 90%
+  .section
+    &-title
+      &__heading
+        font-size: 22px
+        line-height: 138.6%
+      &__image
+        &::after, &::before
+          content: ''
+          display: inline-block
+          vertical-align: text-top
+          margin: 0 10px
+          margin-top: -5px
+          width: 32px
+          height: 2px
+          background-color: $primary
   .contacts
     &__phone
       margin-right: 0
@@ -108,37 +224,93 @@
   .projects
     padding-top: 2.57rem
     background: $dark
+    &__section-title
+      &-word
+        padding-bottom: 0.4rem
+        &::after
+          display: none
+      &-text
+        margin-bottom: 3rem 
+        max-width: 24rem
+        font-size: 14px
+        line-height: 158.48%
+    &__swiper
+      &-slide-img
+        max-height: 200px
+      &-button
+        &-prev, &-next
+          bottom: 30px
+  .swiper-container-horizontal > .swiper-pagination-bullets
+    bottom: 30px
+  .col-project__content
+    margin-bottom: 0.5rem
+  .swiper
+    &-slide
+      &__heading
+        margin-bottom: 0.7rem
+        font-size: 14px
+        line-height: 138.6%
+      &__value
+        font-size: 14px
+        line-height: 135.84%
   .control
     position: relative
     background-color: $dark
+    &__section-title
+      margin-bottom: 3.214rem
+      margin-top: -26rem
+      &>.section-title__heading
+        margin-bottom: 1.3rem
     &__video
+      margin-top: 1rem
+      margin-bottom: 2.5rem 
       min-height: 200px
       & img
-        width: 39px
-        height: 39px
+        width: 63px
+        height: 63px
     &__text
       color: $light
+      font-size: 14px
+      line-height: 169.8%
+      margin-bottom: 2rem 
+      width: 103%
+      &::before
+        margin-bottom: 1.5rem 
+    &__policy-label
+      margin-top: 0rem
+      margin-left: 2.5rem
+      margin-bottom: 7rem
+    &__input
+      color: #ffffff
     &__button
       position: absolute
       order: 5
-      bottom: -2rem
+      bottom: -2.4rem
       left: 5%
       width: 90%
+      font-size: 15px
+      line-height: 26px
     &__input-group
       flex-basis: 100%
     &__input-group:first-child
       margin-bottom: 5.25rem
     &__label
       color: rgba($light, 0.5)
+      margin-bottom: 0
+      font-size: 15px
+      line-height: 20px
     &__input
       &::placeholder
         color: $light
+        font-size: 18px
+        line-height: 138.72%
     &__policy
       &-label
         justify-content: flex-start
         color: $light
-  .container
-    width: 90%
+        font-size: 15px
+        line-height: 20px
+  
 
 @media screen and ( max-height: 520px )
   .hero
