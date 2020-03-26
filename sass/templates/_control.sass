@@ -43,10 +43,16 @@
     max-width: 55rem 
   &__input
     color: $dark
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
     &-group
+      position: relative
       display: flex
       flex-direction: column
       flex-basis: 30%
+      &>label
+        &.invalid
+          position: absolute
+          bottom: -15px
   &__label
     margin-bottom: -7px
   &__button

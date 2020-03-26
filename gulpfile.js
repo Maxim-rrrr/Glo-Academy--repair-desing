@@ -25,22 +25,25 @@ function bs() {
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
         .pipe(sass())
-        //gulp-autoprefixer
-        .pipe(autoprefixer({
-            cascade: false
-        }))
         .pipe(dest("./css"))
         //browser-sync
         .pipe(browserSync.stream());
 };
 
+// buildCSS
 function buildCSS(done) {
     src('css/**/**.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
+        //gulp-autoprefixer
+        .pipe(autoprefixer({
+            browsers: ['last 16 versions'],
+            cascade: false
+        }))
         .pipe(dest('dist/css/'));
     done();
 };
 
+// buildJS
 function buildJS(done) {
     src(['js/**.js', '!js/**.min.js'])
         .pipe(minify({
@@ -58,6 +61,7 @@ function buildJS(done) {
     done();
 };
 
+// buildHTML
 function buildHTML(done) {
     src('**.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
@@ -65,6 +69,7 @@ function buildHTML(done) {
     done();
 };
 
+// buildPHP
 function buildPHP(done) {
     src('**.php')
         .pipe(dest('dist/'));
@@ -73,12 +78,14 @@ function buildPHP(done) {
     done();
 };
 
+// buildFonts
 function buildFonts(done) {
     src('fonts/**/**')
         .pipe(dest('dist/fonts/'));
     done();
 };
 
+//imgMin
 function imgMin(done) {
     src('img/**/*.jpg')
         .pipe(tinypng({key: 'qCMljd7n0TwTVKTdbHQqSKXS0PpmgkpP',}))
@@ -90,12 +97,14 @@ function imgMin(done) {
     done();
 };
 
+// buildTxt
 function buildTxt(done) {
     src('**.txt')
         .pipe(dest('dist/'));
     done();
 };
 
+// buildTextolite
 function buildTextolite(done) {
     src('textolite/**')
         .pipe(dest('dist/textolite/'));
