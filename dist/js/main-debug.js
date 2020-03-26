@@ -142,11 +142,18 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
           modalThanks.toggleClass('modal--visible');
-          ym(61250854,'reachGoal','form')
+          ym(61250854,'reachGoal','form');
         }
       });
     }
   });
+
+  $('#modal-policy-checkbox').on('click', () => {
+    
+    $('#modalCheckLabel').toggleClass('check');
+        
+  });
+
   // Форма в подвале
   $('.footer__form').validate({
     rules: {
@@ -193,10 +200,16 @@ $(document).ready(function () {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
           modalThanks.toggleClass('modal--visible');
-          ym(61250854,'reachGoal','form')
+          ym(61250854,'reachGoal','form');
         }
       });
     }
+  });
+
+  $('#footer-policy-checkbox').on('click', () => {
+    
+    $('#footerCheckLabel').toggleClass('check');
+        
   });
 
   // Форма после секции "Контроль"
@@ -239,24 +252,12 @@ $(document).ready(function () {
           modalThanks.toggleClass('modal--visible');
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
-          ym(61250854,'reachGoal','form')
+          ym(61250854,'reachGoal','form');
         }
       });
     }
   });
 
-  $('#modal-policy-checkbox').on('click', () => {
-    
-    $('#modalCheckLabel').toggleClass('check');
-        
-  });
-  
-  $('#footer-policy-checkbox').on('click', () => {
-    
-    $('#footerCheckLabel').toggleClass('check');
-        
-  });
-  
   $('#control-policy-checkbox').on('click', () => {
     
     $('#controlCheckLabel').toggleClass('check');

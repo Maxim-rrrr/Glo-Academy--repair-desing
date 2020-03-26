@@ -804,7 +804,7 @@ h1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .projects__swiper-slide > img {
+    .projects__swiper-slide > picture {
       max-width: 110%;
       width: 110%; }
     .projects__swiper-slide-row {
@@ -1760,7 +1760,9 @@ h1 {
       font-size: 14px;
       line-height: 158.48%; }
     .projects__swiper-slide-img {
-      max-height: 200px; }
+      max-height: 200px;
+      width: auto;
+      height: auto; }
     .projects__swiper-button-prev, .projects__swiper-button-next {
       bottom: 30px; }
   .swiper-container-horizontal > .swiper-pagination-bullets {
