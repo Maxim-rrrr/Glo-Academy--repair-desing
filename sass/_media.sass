@@ -88,14 +88,20 @@
   .title
     font-size: 1.64rem
   .hero
-    &__content
-      max-width: 22.86rem
+    &__title
+      margin-top: 2.5rem
+      max-width: 22rem 
+      font-size: 23px
+      line-height: 132.83%
     &__text
+      max-width: 321px
       font-size: 1.29rem
-      margin-bottom: 2.28rem
+      margin-bottom: 3rem
+      font-size: 18px
+      line-height: 135.84%
     &__button
       display: block
-      min-width: 22.86rem
+      width: 100%
       margin-bottom: 1.85rem
     &__scroll-down
       display: none
@@ -131,10 +137,13 @@
       &-label
         justify-content: flex-start
         color: $light
+  .container
+    width: 90%
 
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
       display: none
+  
 
   

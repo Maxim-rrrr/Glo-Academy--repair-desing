@@ -1610,14 +1610,20 @@ h1 {
     display: none; }
   .title {
     font-size: 1.64rem; }
-  .hero__content {
-    max-width: 22.86rem; }
+  .hero__title {
+    margin-top: 2.5rem;
+    max-width: 22rem;
+    font-size: 23px;
+    line-height: 132.83%; }
   .hero__text {
+    max-width: 321px;
     font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 3rem;
+    font-size: 18px;
+    line-height: 135.84%; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
+    width: 100%;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
@@ -1666,7 +1672,9 @@ h1 {
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      color: #ffffff; } }
+      color: #ffffff; }
+  .container {
+    width: 90%; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
