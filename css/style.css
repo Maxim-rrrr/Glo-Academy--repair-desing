@@ -975,7 +975,8 @@ h1 {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-  margin-top: 1.3rem; }
+  margin-top: 0.9rem;
+  margin-left: -2.5rem; }
   .control__policy-label {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1253,6 +1254,7 @@ h1 {
     padding-top: 1.5rem; }
     .footer__contacts-text {
       max-width: 35rem;
+      padding-left: -1rem;
       padding-bottom: 1.5rem;
       font-family: 'Yeseva One', cursive;
       font-weight: normal;
@@ -1302,7 +1304,7 @@ h1 {
         align-items: center;
         min-width: 5.07rem; }
   .footer__map {
-    margin: 0 auto 3.5rem;
+    margin: 0 auto 4.5rem;
     max-width: 66rem;
     min-height: 33.214rem;
     -webkit-filter: grayscale(100%);
