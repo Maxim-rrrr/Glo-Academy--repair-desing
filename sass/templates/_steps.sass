@@ -4,6 +4,7 @@
   background: $dark url(../img/lines-bg-hero.svg) no-repeat center / cover
   background-size: cover
   &__section-title
+    position: relative
     margin-top: 1rem
     margin-bottom: 6rem
     &-heading
@@ -26,6 +27,8 @@
       list-style: none
       padding: 0
       z-index: 1
+      &>.swiper-wrapper>.swiper-slide
+        padding-left: 2px
     &-slide
       &-number
         margin-bottom: 1.3rem
@@ -83,6 +86,7 @@
     justify-content: space-between
     flex-wrap: wrap
     margin-bottom: 4.5rem
+    margin-left: 2px
     &>.swiper-pagination-bullet
       background-color: transparent
       flex-basis: 33%
@@ -137,3 +141,9 @@
           content: '06'
         &::after
           content: 'Приемка-сдача работ'
+.anchor-link-steps
+  position: relative
+  &>#steps
+    position: absolute
+    top: -50px
+  

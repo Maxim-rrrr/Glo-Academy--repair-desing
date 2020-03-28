@@ -25,6 +25,10 @@ function bs() {
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
         .pipe(sass())
+        //gulp-autoprefixer
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         .pipe(dest("./css"))
         //browser-sync
         .pipe(browserSync.stream());
@@ -34,11 +38,6 @@ function serveSass() {
 function buildCSS(done) {
     src('css/**/**.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        //gulp-autoprefixer
-        .pipe(autoprefixer({
-            browsers: ['last 16 versions'],
-            cascade: false
-        }))
         .pipe(dest('dist/css/'));
     done();
 };

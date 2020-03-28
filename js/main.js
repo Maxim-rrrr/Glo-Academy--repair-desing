@@ -200,7 +200,7 @@ $(document).ready(function () {
           console.log('Ajax сработал, ответ с сервера', response);
           $(form)[0].reset();
           modalThanks.toggleClass('modal--visible');
-          ym(61250854,'reachGoal','form');
+          ym(61250854,'reachGoal','form');                         // цель яндекс.метрика
         }
       });
     }
